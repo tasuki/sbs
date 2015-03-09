@@ -184,7 +184,7 @@ And one more, called `tomas-jacko.md`:
 	jen o trochu víc zarostlou.  
 	A proto dneska jsem, kde jsem.  
 
-Now visit http://localhost/~user/side-by-side/ and voilá...
+Now visit the website (without the base specified) and voilá...
 
 ## Options
 
