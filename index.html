@@ -15,8 +15,14 @@
     <div class="pure-menu pure-menu-open pure-menu-horizontal menu-main">
       <ul>
         <li ng-repeat="link in links"><a href="" ng-click="display(link.display)" ng-bind-html="link.text"></a></li>
-        <li><a href="" ng-click="flipPick()"><i class="material-icons">menu</i><span>Compare translations</span></a></li>
-        <li><a href="" ng-click="showPage('about')"><i class="material-icons">star</i><span>About</span></a></li>
+        <li><a href="" ng-click="flipPick()">
+            <svg class="icon">
+              <use xlink:href="/fonts/icons.svg#icon-menu"></use>
+            </svg><span>Compare translations</span></a></li>
+        <li><a href="" ng-click="showPage('about')">
+            <svg class="icon">
+              <use xlink:href="/fonts/icons.svg#icon-star"></use>
+            </svg><span>About</span></a></li>
       </ul>
     </div>
     <div ng-controller="ComparisonController" class="cols-{{columns}}">
@@ -25,8 +31,12 @@
           <div ng-repeat="heading in headings" class="version">
             <div class="version-padded">
               <div class="version-menu">
-                <div ng-show="!pick" class="arrow material-icons">keyboard_arrow_up</div>
-                <div ng-show="pick" class="arrow material-icons">keyboard_arrow_down</div>
+                <svg ng-show="!pick" class="icon arrow">
+                  <use xlink:href="/fonts/icons.svg#icon-expand-less"></use>
+                </svg>
+                <svg ng-show="pick" class="icon arrow">
+                  <use xlink:href="/fonts/icons.svg#icon-expand-more"></use>
+                </svg>
                 <div ng-bind-html="heading" class="text"></div>
               </div>
             </div>
